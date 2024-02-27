@@ -1,0 +1,14 @@
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.AssemblyInfoInputs.cache
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.AssemblyInfo.cs
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\bin\Debug\net8.0\DigitalLibraryManagementSystem.exe
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\bin\Debug\net8.0\DigitalLibraryManagementSystem.deps.json
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\bin\Debug\net8.0\DigitalLibraryManagementSystem.runtimeconfig.json
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\bin\Debug\net8.0\DigitalLibraryManagementSystem.dll
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\bin\Debug\net8.0\DigitalLibraryManagementSystem.pdb
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.dll
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\refint\DigitalLibraryManagementSystem.dll
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.pdb
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\DigitalLibraryManagementSystem.genruntimeconfig.cache
+C:\Users\stasc\Desktop\TMPPP\DigitalLibraryManagementSystem\obj\Debug\net8.0\ref\DigitalLibraryManagementSystem.dll
