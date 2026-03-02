@@ -1,20 +1,10 @@
-﻿using DigitalLibraryManagementSystem.Models.Users;
+using System;
+using DigitalLibraryManagementSystem.Models.Users;
 using DigitalLibraryManagementSystem.Models.Documents;
 using DigitalLibraryManagementSystem.Models.Loans;
 using DigitalLibraryManagementSystem.Services;
 using DigitalLibraryManagementSystem.Factories;
-
-UserFactory factory = new StudentFactory();
-User student = factory.CreateUser("2", "Ion", "ion@utm.md");
-
-Console.WriteLine(student.GetMaxLoanDays());
-
-var book = new BookBuilder()
-    .SetTitle("Design Patterns")
-    .SetAuthor("Gamma et al.")
-    .Build();
-
-Console.WriteLine(book.GetDocumentType());
+using DigitalLibraryManagementSystem.AbstractFactories;
 
 namespace DigitalLibraryManagementSystem
 {
@@ -22,15 +12,37 @@ namespace DigitalLibraryManagementSystem
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("===== SINGLETON TEST =====");
             var system1 = LibrarySystem.Instance;
-var system2 = LibrarySystem.Instance;
+            var system2 = LibrarySystem.Instance;
 
-Console.WriteLine(system1 == system2); // trebuie True
-system1.PrintSystemInfo();
-            User student = new Student("1", "Ana", "ana@utm.md");
-            Document book = new Book("OOP in C#", "Ion Popescu");
+            Console.WriteLine($"Same instance: {ReferenceEquals(system1, system2)}");
+            system1.PrintSystemInfo();
 
-            Loan loan = new Loan(student, book);
+
+            Console.WriteLine("\n===== FACTORY METHOD TEST =====");
+            UserFactory factory = new StudentFactory();
+            User user = factory.CreateUser("1", "Ion", "ion@utm.md");
+
+            Console.WriteLine($"User created: {user.Name}");
+            Console.WriteLine($"Email: {user.Email}");
+            Console.WriteLine($"Max loan days: {user.GetMaxLoanDays()}");
+
+
+            Console.WriteLine("\n===== ABSTRACT FACTORY TEST =====");
+            ILibraryFactory libraryFactory = new DigitalLibraryFactory();
+
+            User afUser = libraryFactory.CreateUser("2", "Maria", "maria@utm.md");
+            Document afDocument = libraryFactory.CreateDocument("Design Patterns", "Gamma");
+
+            Console.WriteLine($"User created: {afUser.Name}");
+            Console.WriteLine($"Email: {afUser.Email}");
+            Console.WriteLine($"Max loan days: {afUser.GetMaxLoanDays()}");
+            Console.WriteLine($"Document type: {afDocument.GetDocumentType()}");
+
+
+            Console.WriteLine("\n===== LAB 1 TEST (Loan) =====");
+            Loan loan = new Loan(afUser, afDocument);
             loan.PrintLoanInfo();
         }
     }
