@@ -11,5 +11,10 @@ namespace DigitalLibraryManagementSystem.Models.Users
         {
             return 14;
         }
+
+        public override string GetRole()
+        {
+            return "Student";
+        }
     }
 }

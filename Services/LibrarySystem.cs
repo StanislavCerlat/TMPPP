@@ -2,23 +2,14 @@ namespace DigitalLibraryManagementSystem.Services
 {
     public sealed class LibrarySystem
     {
-        private static LibrarySystem _instance;
+        private static readonly Lazy<LibrarySystem> _instance =
+            new Lazy<LibrarySystem>(() => new LibrarySystem());
 
         private LibrarySystem()
         {
         }
 
-        public static LibrarySystem Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new LibrarySystem();
-                }
-                return _instance;
-            }
-        }
+        public static LibrarySystem Instance => _instance.Value;
 
         public void PrintSystemInfo()
         {

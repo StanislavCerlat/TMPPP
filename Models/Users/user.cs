@@ -14,5 +14,6 @@ namespace DigitalLibraryManagementSystem.Models.Users
         }
 
         public abstract int GetMaxLoanDays();
+        public abstract string GetRole();
     }
 }

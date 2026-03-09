@@ -20,6 +20,30 @@ namespace DigitalLibraryManagementSystem
             system1.PrintSystemInfo();
 
 
+           Console.WriteLine("\n===== BUILDER TEST =====");
+BookBuilder builder = new BookBuilder();
+
+Book customBook = builder
+    .SetTitle("Design Patterns")
+    .SetAuthor("GoF")
+    .SetGenre("Software Engineering")
+    .SetPages(395)
+    .SetISBN("978-0201633610")
+    .Build();
+
+customBook.PrintBookInfo();
+
+
+            Console.WriteLine("\n===== PROTOTYPE TEST =====");
+            Book clonedBook = ((dynamic)customBook).Clone();
+
+            Console.WriteLine("Original book:");
+            ((dynamic)customBook).PrintBookInfo();
+
+            Console.WriteLine("\nCloned book:");
+            ((dynamic)clonedBook).PrintBookInfo();
+
+
             Console.WriteLine("\n===== FACTORY METHOD TEST =====");
             UserFactory factory = new StudentFactory();
             User user = factory.CreateUser("1", "Ion", "ion@utm.md");
@@ -41,7 +65,7 @@ namespace DigitalLibraryManagementSystem
             Console.WriteLine($"Document type: {afDocument.GetDocumentType()}");
 
 
-            Console.WriteLine("\n===== LAB 1 TEST (Loan) =====");
+            Console.WriteLine("\n===== LOAN TEST =====");
             Loan loan = new Loan(afUser, afDocument);
             loan.PrintLoanInfo();
         }
